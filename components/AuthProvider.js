@@ -7,6 +7,14 @@ export const AuthContext = createContext();
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
 
+  const login = (useData) => {
+    setUser(userData);
+  }
+
+  const logout= () => {
+    setUser(null);
+  }
+
   return (
     <AuthContext.Provider value={{ user}}>
       {children}
